@@ -1,0 +1,417 @@
+/* === Basic Reset & Body Styling === */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling for anchor links */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Simple, readable font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #5c0099;
+    /* Light grey background */
+}
+
+main {
+    max-width: 960px;
+    /* Limits content width for readability */
+    margin: 20px auto;
+    /* Centers the main content */
+    padding: 0 20px;
+    /* Adds padding on the sides */
+}
+
+/* === Header & Navigation === */
+header {
+    background-color: #a54ee0;
+    /* Dark background for header */
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    /* Makes the header stick to the top */
+    top: 0;
+    z-index: 10;
+    /* Ensures header stays above other content */
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    /* Makes list items appear side-by-side */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: #0a33ff;
+    /* Light blue color on hover */
+}
+
+/* === Section Styling === */
+.section {
+    background-color: #ffffff;
+    /* White background for sections */
+    margin-bottom: 20px;
+    /* Space between sections */
+    padding: 40px 30px;
+    /* Padding inside sections */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.section h2 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 3px solid #41e852;
+    /* Accent color border */
+    padding-bottom: 10px;
+    display: inline-block;
+    /* Allows border to fit content */
+}
+
+/* Center the heading container */
+.section>div:first-of-type {
+    /* Targets the container div if needed */
+    text-align: center;
+    /* Center align block elements like h2 */
+}
+
+.section>h2 {
+    display: block;
+    /* Override inline-block if needed */
+    text-align: center;
+    /* Center the text */
+}
+
+/* Re-apply centering for h2 specifically */
+section h2 {
+    display: block;
+    /* Make h2 a block to center it */
+    text-align: center;
+    /* Center the text itself */
+    margin-left: auto;
+    /* Auto margins for block centering */
+    margin-right: auto;
+    max-width: max-content;
+    /* Ensure border doesn't span full width */
+}
+
+
+/* === Homepage Specific Styling === */
+#home {
+    text-align: center;
+    /* Center align content in the home section */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.profile-photo {
+    width: 150px;
+    /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    /* Makes the image circular */
+    object-fit: cover;
+    /* Ensures the image covers the area well */
+    margin-bottom: 20px;
+    border: 3px solid #f4fe2e;
+    /* Accent border */
+}
+
+.intro {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #630e7d;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c51f1f;
+}
+
+/* === Academics Section === */
+.education-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #a0daff;
+    /* Accent line */
+    text-align: center;
+}
+
+.education-item h3 {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* === Projects Section === */
+.project-grid {
+    display: grid;
+    /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive columns */
+    gap: 20px;
+    /* Space between grid items */
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    /* Slightly different background for items */
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.project-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-item img {
+    /* Optional project image styling */
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* === Skills Section === */
+.skills-container {
+    display: flex;
+    /* Use Flexbox for layout */
+    justify-content: space-around;
+    /* Distribute space between categories */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    gap: 20px;
+    /* Space between categories */
+}
+
+.skill-category {
+    flex: 1;
+    /* Allow categories to grow */
+    min-width: 200px;
+    /* Minimum width before wrapping */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.skill-category h3 {
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.skill-category ul {
+    list-style-position: inside;
+    padding-left: 0;
+    /* Remove default padding if using inside */
+}
+
+/* === Extracurriculars Section === */
+#extracurriculars ul {
+    list-style: none;
+    /* Remove default bullets */
+    padding-left: 0;
+}
+
+#extracurriculars li {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 3px solid #a0daff;
+    /* Accent line */
+    border-radius: 4px;
+}
+
+#extracurriculars li strong {
+    color: #333;
+}
+
+/* === Contact Section === */
+/* === Contact Section Enhancements === */
+#contact .contact-links {
+    /* Style the links list if you kept it */
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact .contact-links li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#contact .contact-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+#contact .contact-links a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+#contact h3 {
+    /* Style for the "Send Me a Message" heading */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.contact-divider {
+    /* Optional divider style */
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 30px auto;
+    width: 80%;
+}
+
+
+/* === Contact Form Styling === */
+.contact-form {
+    max-width: 600px;
+    /* Limit form width */
+    margin: 0 auto;
+    /* Center the form */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* Space between form fields */
+}
+
+.form-group label {
+    display: block;
+    /* Makes label appear on its own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    /* Make inputs fill the container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+    /* Allow vertical resizing only */
+    min-height: 100px;
+}
+
+.submit-button {
+    /* Style the submit button */
+    display: block;
+    /* Make button take full width */
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+.form-note {
+    /* Style the small note below the form */
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* === Basic Responsiveness === */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        /* Stack nav items vertically */
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .section {
+        padding: 30px 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        /* Stack skill categories vertically */
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

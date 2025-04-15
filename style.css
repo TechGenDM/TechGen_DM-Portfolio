@@ -154,7 +154,7 @@ section h2 {
 
 .cta-button {
     display: inline-block;
-    background-color: #630e7d;
+    background-color: #5c0099;
     color: #fff;
     padding: 12px 25px;
     text-decoration: none;
@@ -359,7 +359,7 @@ section h2 {
     /* Make button take full width */
     width: 100%;
     padding: 12px 20px;
-    background-color: #333;
+    background-color: #5c0099;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -370,7 +370,7 @@ section h2 {
 }
 
 .submit-button:hover {
-    background-color: #555;
+    background-color: #c51f1f;
 }
 
 .form-note {

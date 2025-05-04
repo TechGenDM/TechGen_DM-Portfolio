@@ -33,7 +33,7 @@ Clone the repo:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/portfolio-website.git
+git clone https://github.com/https:/TechGenDM/portfolio-website.git
 Navigate to the project folder:
 
 bash

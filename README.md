@@ -1,3 +1,5 @@
+#TECHGEN_DM-PORTFOLIO
+
 🌐 Personal Portfolio Website
 Welcome to my personal portfolio website! This is a simple and clean web-based portfolio created using HTML, CSS, and JavaScript. I built this site to showcase my background, achievements, academic details, and projects as I begin my journey in tech after completing Class 12.
 

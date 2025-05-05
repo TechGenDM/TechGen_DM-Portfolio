@@ -11,6 +11,12 @@
     font-style: normal;
 }
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 html {
     scroll-behavior: smooth;
     /* Enables smooth scrolling for anchor links */
@@ -413,5 +419,87 @@ section h2 {
 
     h2 {
         font-size: 1.5em;
+    }
+}
+
+/* Mobile Navigation Styles */
+.nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 1000;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        margin: 4px 0;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    header {
+        position: relative;
+        padding: 10px 0;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #a54ee0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+        opacity: 0;
+    }
+
+    nav.active {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 15px;
+        color: white;
+    }
+
+    /* Hamburger Animation */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
     }
 }
